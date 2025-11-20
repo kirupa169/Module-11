@@ -34,31 +34,41 @@ self.next = None
 class LinkedList:
 def init (self):
 self.head = None
-def push_front(self, newElement):
-new_node = Node(newElement)
+def push(self, new_data):
+new_node = Node(new_data)
 new_node.next = self.head
 self.head = new_node
-def PrintList(self):
-temp = self.head
-if(temp != None):
-print("The list contains:", end=" ")
-while (temp != None):
-print(temp.data, end=" ")
-temp = temp.next
-print()
+def search(self, x):
+current = self.head
+while current:
+if current.data ==x:
+return True
+current = current.next
+return False
+llist = LinkedList()
+llist.push(10);
+llist.push(30);
+llist.push(11);
+llist.push(21);
+llist.push(14);
+data = int(input())
+if llist.search(data):
+print("Yes")
 else:
-print("The list is empty.")
-MyList = LinkedList()
-MyList.push_front(10)
-MyList.push_front(20)
-MyList.push_front(30)
-MyList.PrintList()
+print("No")
 ```
 
+
+
+
+
 ## Sample Output
-<img width="800" height="181" alt="image" src="https://github.com/user-attachments/assets/b04d84c0-a27a-4fcf-8919-a8e8b553112e" />
+<img width="703" height="196" alt="image" src="https://github.com/user-attachments/assets/21e07358-1b40-40e0-b65d-e74389612b56" />
+
 
 ## Result
+Thus the program has been successfully executed
+
 Thus the program has been successfully executed
 
 
